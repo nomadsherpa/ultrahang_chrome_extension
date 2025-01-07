@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+
+# Usage: ./bin/fetch_transcript <YouTube video ID>
+# Example: ./bin/fetch_transcript 9bZkp7q19f0
+
+import json
+import sys
+
+sys.path.append('./vendor')
+from youtube_transcript_api import YouTubeTranscriptApi
+
+if len(sys.argv) < 2:
+   print("Error: Please provide a YouTube video ID as an argument", file=sys.stderr)
+   sys.exit(1)
+
+video_id = sys.argv[1]
+srt = YouTubeTranscriptApi.get_transcript(video_id, languages=['hu'])
+
+print(json.dumps(srt, ensure_ascii=False))
