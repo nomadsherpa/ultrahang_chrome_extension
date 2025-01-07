@@ -4,7 +4,7 @@ defmodule RecentVideos do
 
   @channel_id "UChUByu3QDGaVD6iyt0jzngw"
 
-  def fetch(count \\ 15) do
+  def fetch_ids(count \\ 15) do
     url =
       "#{@youtube_api_url}/search?" <>
         URI.encode_query(%{
