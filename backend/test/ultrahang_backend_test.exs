@@ -1,8 +1,7 @@
 defmodule UltrahangBackendTest do
   use ExUnit.Case
-  doctest UltrahangBackend
 
-  test "greets the world" do
-    assert UltrahangBackend.hello() == :world
+  test "works" do
+    assert VideoProcessor.start() == :noop
   end
 end
