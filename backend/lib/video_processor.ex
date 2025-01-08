@@ -2,7 +2,7 @@ defmodule VideoProcessor do
   @five_minutes_in_seconds 300
 
   def start do
-    {:ok, recent_video_ids} = RecentVideos.fetch_ids()
+    {:ok, recent_video_ids} = GoogleApiClient.RecentVideos.fetch_ids()
 
     processed_video_ids = processed_videos_ids()
 

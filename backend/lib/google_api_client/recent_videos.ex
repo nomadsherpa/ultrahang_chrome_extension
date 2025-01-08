@@ -1,6 +1,8 @@
-defmodule RecentVideos do
-  @youtube_api_url "https://www.googleapis.com/youtube/v3"
+defmodule GoogleApiClient.RecentVideos do
   @api_key System.get_env("YOUTUBE_DATA_API_KEY")
+
+  @config Application.compile_env(:ultrahang_backend, :google_api)
+  @youtube_api_url "#{@config[:base_url]}/youtube/v3"
 
   @channel_id "UChUByu3QDGaVD6iyt0jzngw"
 
