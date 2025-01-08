@@ -2,7 +2,7 @@ defmodule LLM do
   def fetch_starting_time(filtered_transcript) do
     question = build_question_for_llm(filtered_transcript)
 
-    {:ok, answer_text} = ChatGPT.ask_question(question)
+    {:ok, answer_text} = OpenaiApiClient.ChatGPT.ask_question(question)
     {:ok, answer} = Jason.decode(answer_text)
 
     answer["start"]

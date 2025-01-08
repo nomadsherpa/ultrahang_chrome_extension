@@ -1,9 +1,11 @@
-defmodule ChatGPT do
-  @api_url "https://api.openai.com/v1/chat/completions"
+defmodule OpenaiApiClient.ChatGPT do
   @api_key System.get_env("OPENAI_API_KEY")
 
+  @config Application.compile_env(:ultrahang_backend, :openai_api)
+  @api_url "#{@config[:base_url]}/v1/chat/completions"
+
   def ask_question(question) do
-    IO.puts("Asking LLM: #{question}")
+    IO.puts("Asking LLM...")
 
     headers = [
       {"Authorization", "Bearer #{@api_key}"},

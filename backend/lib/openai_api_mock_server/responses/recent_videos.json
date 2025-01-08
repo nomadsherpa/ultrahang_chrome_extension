@@ -1,0 +1,34 @@
+{
+  "id": "chatcmpl-AnUCDzvVrHpmDI3ACE5ZFXvimD4Wl",
+  "object": "chat.completion",
+  "created": 1736357509,
+  "model": "gpt-3.5-turbo-0125",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{ \"start\": 115.68, \"text\": \"történik most a fronton mi zajlik így év\" }",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3977,
+    "completion_tokens": 33,
+    "total_tokens": 4010,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": null
+}
