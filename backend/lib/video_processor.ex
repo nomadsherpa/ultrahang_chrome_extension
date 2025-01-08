@@ -26,11 +26,9 @@ defmodule VideoProcessor do
         start + duration <= @five_minutes_in_seconds
       end)
 
-    question = build_question_for_llm(filtered_transcript)
-    {:ok, answer_text} = ChatGPT.ask_question(question)
-    {:ok, answer} = Jason.decode(answer_text)
+    starting_time = LLM.fetch_starting_time(filtered_transcript)
 
-    IO.puts("----------------------#{answer["start"]}")
+    IO.puts("---------------------- #{starting_time}")
 
     {:ok, video_id}
   end
@@ -71,20 +69,5 @@ defmodule VideoProcessor do
     {:ok, transcript} = Jason.decode(output)
 
     transcript
-  end
-
-  def build_question_for_llm(transcript) do
-    """
-      Answer with this format:
-      {
-        "start": TIMESTAMP,
-        "text": TEXT_FROM_TRANSCRIPT_SEGMENT
-      }
-
-      Giv me the start time when the conversation really starts after all the house keeping from this podcast in Hungarian.
-
-      The first 5 minutes of the transcript:
-      #{Jason.encode!(transcript)}
-    """
   end
 end
