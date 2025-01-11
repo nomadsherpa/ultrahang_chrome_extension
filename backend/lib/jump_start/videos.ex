@@ -101,4 +101,12 @@ defmodule JumpStart.Videos do
   def change_video(%Video{} = video, attrs \\ %{}) do
     Video.changeset(video, attrs)
   end
+
+  def get_processed_video_yt_ids(recent_yt_videos_ids) do
+    Repo.all(
+      from v in Video,
+        where: v.yt_id in ^recent_yt_videos_ids,
+        select: v.yt_id
+    )
+  end
 end

@@ -4,13 +4,8 @@ defmodule JumpStart.VideoProcessor do
   def start do
     {:ok, recent_yt_videos} = GoogleApiClient.RecentVideos.fetch()
 
-    processed_video_ids = processed_video_ids()
-
     recent_yt_videos
-    # Filter out processed videos
-    |> Enum.reject(fn yt_video ->
-      yt_video["id"]["videoId"] in processed_video_ids
-    end)
+    |> remove_processed
     # Save the new videos to the DB
     |> Enum.map(fn yt_video ->
       {:ok, new_video} =
@@ -24,6 +19,20 @@ defmodule JumpStart.VideoProcessor do
     end)
     # Process the new videos
     |> Enum.each(&process_video/1)
+  end
+
+  defp remove_processed(recent_yt_videos) do
+    recent_yt_videos_ids =
+      Enum.map(recent_yt_videos, fn yt_video ->
+        yt_video["id"]["videoId"]
+      end)
+
+    processed_video_ids =
+      MapSet.new(JumpStart.Videos.get_processed_video_yt_ids(recent_yt_videos_ids))
+
+    Enum.reject(recent_yt_videos, fn yt_video ->
+      yt_video["id"]["videoId"] in processed_video_ids
+    end)
   end
 
   defp process_video(video) do
@@ -54,27 +63,6 @@ defmodule JumpStart.VideoProcessor do
     Enum.take_while(transcript, fn %{"duration" => duration, "start" => start} ->
       start + duration <= @five_minutes_in_seconds
     end)
-  end
-
-  defp processed_video_ids do
-    # TODO: Read this from a database
-    MapSet.new([
-      "2y8jRZZhDZ4",
-      "fYhb6W9gCQU",
-      "YwvSyLU3f3s",
-      "VveNw8yi1H0",
-      "rwnc2OSsxUM",
-      "f74lXzjI-gA",
-      "iHBSZYQstos",
-      "hSV4KobTbK0",
-      # "dC4f5aVKKz4",
-      "DgJuJq1_g2Q",
-      "soDxRoePm2Q",
-      "SGLNBpGw63g",
-      "iO8G_lLoisU",
-      "9Y0Zori8fgY",
-      "Be5AqVUGdRg"
-    ])
   end
 
   defp fetch_transcript(video_id) do

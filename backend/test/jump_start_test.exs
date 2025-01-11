@@ -3,6 +3,8 @@ defmodule JumpStartTest do
   use JumpStart.DataCase
 
   test "end to end test" do
+    JumpStart.VideosFixtures.video_fixtures()
+
     JumpStart.VideoProcessor.start()
 
     # It created a new video record in the DB
