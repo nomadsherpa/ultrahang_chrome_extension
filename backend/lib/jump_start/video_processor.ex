@@ -1,4 +1,4 @@
-defmodule VideoProcessor do
+defmodule JumpStart.VideoProcessor do
   @five_minutes_in_seconds 300
 
   def start do
@@ -41,7 +41,7 @@ defmodule VideoProcessor do
     start_time =
       Jason.decode!(transcript)
       |> keep_the_first_five_minutes()
-      |> LLM.calc_starting_time()
+      |> JumpStart.LLM.calc_starting_time()
 
     # Update the start time in the DB
     {:ok, _} =

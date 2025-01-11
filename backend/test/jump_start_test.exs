@@ -3,7 +3,7 @@ defmodule JumpStartTest do
   use JumpStart.DataCase
 
   test "end to end test" do
-    VideoProcessor.start()
+    JumpStart.VideoProcessor.start()
 
     # It created a new video record in the DB
     new_video = JumpStart.Videos.list_videos() |> List.last()

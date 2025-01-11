@@ -1,4 +1,4 @@
-defmodule LLM do
+defmodule JumpStart.LLM do
   def calc_starting_time(filtered_transcript) do
     question = build_question_for_llm(filtered_transcript)
 
