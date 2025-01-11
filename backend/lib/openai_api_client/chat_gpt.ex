@@ -1,7 +1,7 @@
 defmodule OpenaiApiClient.ChatGPT do
   @api_key System.get_env("OPENAI_API_KEY")
 
-  @config Application.compile_env(:ultrahang_backend, :openai_api)
+  @config Application.compile_env(:jump_start, :openai_api)
   @api_url "#{@config[:base_url]}/v1/chat/completions"
 
   def ask_question(question) do

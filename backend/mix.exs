@@ -1,9 +1,9 @@
-defmodule UltrahangBackend.MixProject do
+defmodule JumpStart.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :ultrahang_backend,
+      app: :jump_start,
       version: "0.1.0",
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
@@ -15,7 +15,7 @@ defmodule UltrahangBackend.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {UltrahangBackend.Application, []}
+      mod: {JumpStart.Application, []}
     ]
   end
 

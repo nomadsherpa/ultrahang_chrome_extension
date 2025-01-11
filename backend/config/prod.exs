@@ -1,6 +1,6 @@
 import Config
 
-config :ultrahang_backend,
+config :jump_start,
   google_api: [
     base_url: "https://www.googleapis.com"
   ],

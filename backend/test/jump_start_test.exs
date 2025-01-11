@@ -1,4 +1,4 @@
-defmodule UltrahangBackendTest do
+defmodule JumpStartTest do
   use ExUnit.Case
 
   test "works" do

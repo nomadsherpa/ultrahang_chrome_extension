@@ -1,4 +1,4 @@
-defmodule UltrahangBackend.Application do
+defmodule JumpStart.Application do
   use Application
 
   def start(_type, _args) do
@@ -7,7 +7,7 @@ defmodule UltrahangBackend.Application do
       {Plug.Cowboy, scheme: :http, plug: OpenaiApiMockServer.Base, options: [port: 4001]}
     ]
 
-    opts = [strategy: :one_for_one, name: UltrahangBackend.Supervisor]
+    opts = [strategy: :one_for_one, name: JumpStart.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end
