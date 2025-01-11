@@ -10,6 +10,7 @@ defmodule JumpStart.Application do
     children = [
       {Plug.Cowboy, scheme: :http, plug: GoogleApiMockServer.Base, options: [port: 8080]},
       {Plug.Cowboy, scheme: :http, plug: OpenaiApiMockServer.Base, options: [port: 8081]},
+      {Plug.Cowboy, scheme: :http, plug: YoutubeMockServer.Base, options: [port: 8082]},
       JumpStartWeb.Telemetry,
       JumpStart.Repo,
       {DNSCluster, query: Application.get_env(:jump_start, :dns_cluster_query) || :ignore},
