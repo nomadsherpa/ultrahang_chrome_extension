@@ -23,7 +23,7 @@ defmodule VideoProcessor do
       new_video
     end)
     # Process the new videos
-    |> Enum.map(&process_video/1)
+    |> Enum.each(&process_video/1)
   end
 
   def process_video(video) do
@@ -31,16 +31,26 @@ defmodule VideoProcessor do
 
     transcript = fetch_transcript(video.yt_id)
 
+    # Update the transcript in the DB
+    {:ok, _} =
+      JumpStart.Videos.update_video(video, %{
+        transcript: transcript
+      })
+
+    transcript_json = Jason.decode!(transcript)
+
     filtered_transcript =
-      Enum.take_while(transcript, fn %{"duration" => duration, "start" => start} ->
+      Enum.take_while(transcript_json, fn %{"duration" => duration, "start" => start} ->
         start + duration <= @five_minutes_in_seconds
       end)
 
-    starting_time = LLM.fetch_starting_time(filtered_transcript)
+    start_time = LLM.fetch_starting_time(filtered_transcript)
 
-    IO.puts("---------------------- #{starting_time}")
-
-    starting_time
+    # Update the start time in the DB
+    {:ok, _} =
+      JumpStart.Videos.update_video(video, %{
+        start_time: round(start_time)
+      })
   end
 
   # TODO: Investigate private functions
@@ -71,13 +81,11 @@ defmodule VideoProcessor do
     IO.puts("Fetching transcript for video: #{video_id}")
 
     # TODO: Fix the hardcoded path
-    {output, 0} =
+    {transcript, 0} =
       System.cmd(
         "/Users/peter/projects/chrome_extensions/ultrahang/ultrahang/backend/bin/fetch_transcript",
         [video_id]
       )
-
-    {:ok, transcript} = Jason.decode(output)
 
     transcript
   end
