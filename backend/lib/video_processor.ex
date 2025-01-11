@@ -26,7 +26,8 @@ defmodule VideoProcessor do
     |> Enum.each(&process_video/1)
   end
 
-  def process_video(video) do
+  defp process_video(video) do
+    # TODO: Use a logger
     IO.puts("Processing video: #{video.yt_id}")
 
     transcript = fetch_transcript(video.yt_id)
@@ -37,14 +38,10 @@ defmodule VideoProcessor do
         transcript: transcript
       })
 
-    transcript_json = Jason.decode!(transcript)
-
-    filtered_transcript =
-      Enum.take_while(transcript_json, fn %{"duration" => duration, "start" => start} ->
-        start + duration <= @five_minutes_in_seconds
-      end)
-
-    start_time = LLM.fetch_starting_time(filtered_transcript)
+    start_time =
+      Jason.decode!(transcript)
+      |> keep_the_first_five_minutes()
+      |> LLM.calc_starting_time()
 
     # Update the start time in the DB
     {:ok, _} =
@@ -53,9 +50,13 @@ defmodule VideoProcessor do
       })
   end
 
-  # TODO: Investigate private functions
+  defp keep_the_first_five_minutes(transcript) do
+    Enum.take_while(transcript, fn %{"duration" => duration, "start" => start} ->
+      start + duration <= @five_minutes_in_seconds
+    end)
+  end
 
-  def processed_video_ids do
+  defp processed_video_ids do
     # TODO: Read this from a database
     MapSet.new([
       "2y8jRZZhDZ4",
@@ -76,7 +77,7 @@ defmodule VideoProcessor do
     ])
   end
 
-  def fetch_transcript(video_id) do
+  defp fetch_transcript(video_id) do
     # TODO: handle when a video has no transcript
     IO.puts("Fetching transcript for video: #{video_id}")
 

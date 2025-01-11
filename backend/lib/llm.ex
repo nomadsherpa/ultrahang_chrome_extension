@@ -1,5 +1,5 @@
 defmodule LLM do
-  def fetch_starting_time(filtered_transcript) do
+  def calc_starting_time(filtered_transcript) do
     question = build_question_for_llm(filtered_transcript)
 
     {:ok, answer_text} = OpenaiApiClient.ChatGPT.ask_question(question)
@@ -8,7 +8,7 @@ defmodule LLM do
     answer["start"]
   end
 
-  def build_question_for_llm(transcript) do
+  defp build_question_for_llm(transcript) do
     """
       Answer with this format:
       {
