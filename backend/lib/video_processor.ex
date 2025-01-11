@@ -2,24 +2,34 @@ defmodule VideoProcessor do
   @five_minutes_in_seconds 300
 
   def start do
-    {:ok, recent_video_ids} = GoogleApiClient.RecentVideos.fetch_ids()
+    {:ok, recent_yt_videos} = GoogleApiClient.RecentVideos.fetch()
 
-    processed_video_ids = processed_videos_ids()
+    processed_video_ids = processed_video_ids()
 
-    video_ids_to_process =
-      MapSet.difference(MapSet.new(recent_video_ids), processed_video_ids)
-
-    Enum.each(video_ids_to_process, fn video_id ->
-      process_video(video_id)
+    recent_yt_videos
+    # Filter out processed videos
+    |> Enum.reject(fn yt_video ->
+      yt_video["id"]["videoId"] in processed_video_ids
     end)
+    # Save the new videos to the DB
+    |> Enum.map(fn yt_video ->
+      {:ok, new_video} =
+        JumpStart.Videos.create_video(%{
+          yt_id: yt_video["id"]["videoId"],
+          title: yt_video["snippet"]["title"],
+          published_at: yt_video["snippet"]["publishedAt"]
+        })
 
-    :noop
+      new_video
+    end)
+    # Process the new videos
+    |> Enum.map(&process_video/1)
   end
 
-  def process_video(video_id) do
-    IO.puts("Processing video: #{video_id}")
+  def process_video(video) do
+    IO.puts("Processing video: #{video.yt_id}")
 
-    transcript = fetch_transcript(video_id)
+    transcript = fetch_transcript(video.yt_id)
 
     filtered_transcript =
       Enum.take_while(transcript, fn %{"duration" => duration, "start" => start} ->
@@ -30,14 +40,21 @@ defmodule VideoProcessor do
 
     IO.puts("---------------------- #{starting_time}")
 
-    {:ok, video_id}
+    starting_time
   end
 
   # TODO: Investigate private functions
 
-  def processed_videos_ids do
+  def processed_video_ids do
     # TODO: Read this from a database
     MapSet.new([
+      "2y8jRZZhDZ4",
+      "fYhb6W9gCQU",
+      "YwvSyLU3f3s",
+      "VveNw8yi1H0",
+      "rwnc2OSsxUM",
+      "f74lXzjI-gA",
+      "iHBSZYQstos",
       "hSV4KobTbK0",
       # "dC4f5aVKKz4",
       "DgJuJq1_g2Q",
@@ -45,14 +62,7 @@ defmodule VideoProcessor do
       "SGLNBpGw63g",
       "iO8G_lLoisU",
       "9Y0Zori8fgY",
-      "Be5AqVUGdRg",
-      "2G-odTeV42I",
-      "-lkUXI1Lshg",
-      "qef-DAAPqXk",
-      "4sWpDg6xqIs",
-      "tqJbE5Jth1k",
-      "mtLXMINbRNA",
-      "JowBJ97w810"
+      "Be5AqVUGdRg"
     ])
   end
 
@@ -60,6 +70,7 @@ defmodule VideoProcessor do
     # TODO: handle when a video has no transcript
     IO.puts("Fetching transcript for video: #{video_id}")
 
+    # TODO: Fix the hardcoded path
     {output, 0} =
       System.cmd(
         "/Users/peter/projects/chrome_extensions/ultrahang/ultrahang/backend/bin/fetch_transcript",

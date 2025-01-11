@@ -1,131 +1,521 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "LWTIcQp4jXod36_ikt32ZXBnWNU",
+  "etag": "94j31qhMcRp_xMxPcXCUUaRmJdY",
   "nextPageToken": "CA8QAA",
   "regionCode": "TH",
   "pageInfo": {
-    "totalResults": 24314,
+    "totalResults": 25122,
     "resultsPerPage": 15
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "11rUrHrbX9efs-cutowWu3msEu8",
+      "etag": "e0iCTHb4QCTmHn9aphVHfhNtheA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2y8jRZZhDZ4"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-11T10:15:00Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: milyen színvonalon él Zelenszkij a háború idején? - Nógrádi György",
+        "description": "Az Ultrahang legfrissebb adásában Nógrádi György biztonságpolitikai szakértő volt a vendégünk, akivel az orosz-ukrán háború ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2y8jRZZhDZ4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2y8jRZZhDZ4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2y8jRZZhDZ4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-11T10:15:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DiRxZfZ7qadYs-ghd9FI81TanWE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fYhb6W9gCQU"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-10T16:15:04Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Trump belekezdett: az USA háborúzni fog Európával Grönlandért? - Krausz Tamás",
+        "description": "Úgy tűnik, Donald Trump komolyan gondolja, hogy az Egyesült Államok igényt tart Grönlandra. Kinek és mit üzen ezzel az USA ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fYhb6W9gCQU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fYhb6W9gCQU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fYhb6W9gCQU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-10T16:15:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mJm-hk7RKJqI-T57VM-hN25tmMA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YwvSyLU3f3s"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-10T10:15:04Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: buta fenyegetést küldött Magyarországnak az ukrán miniszter - Somkuti Bálint",
+        "description": "Az Ultrahang legfrissebb adásában Somkuti Bálint biztonságpolitikai szakértő, a @somkutibalint Youtube csatorna műsorvezetője ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YwvSyLU3f3s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YwvSyLU3f3s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YwvSyLU3f3s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-10T10:15:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DNgi7mH2Bq4X94yy-tl7DdMgcMY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VveNw8yi1H0"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-09T16:15:02Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: Trump megtörte a csendet, reagált Putyin feltételére - Kis-Benedek József",
+        "description": "Az Ultrahang legfrissebb adásában Kis-Benedek József biztonságpolitikai szakértő volt a vendégünk, akivel az orosz-ukrán ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VveNw8yi1H0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VveNw8yi1H0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VveNw8yi1H0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-09T16:15:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "J8qTLyEQtf_V-6hHGTVKoM-5fBw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rwnc2OSsxUM"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-09T10:16:13Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: kiderült a valódi cél, sokáig fog ez még tartani? - Kiszelly Zoltán",
+        "description": "Nógrádi György, Resperger István, Hossó Andrea, Georg Spöttle, Robert C. Castel, Stier Gábor, Hidegkuti Konstantin, Somkuti ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rwnc2OSsxUM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rwnc2OSsxUM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rwnc2OSsxUM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-09T10:16:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EREjbgY0s66YvxTt0LoV-TgtBhQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "f74lXzjI-gA"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-08T16:15:03Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: fenyegető hírek érkeztek, nagy összecsapás készül? - Resperger István",
+        "description": "Az Ultrahang legfrissebb adásában Prof. Dr. Resperger István ezredes, egyetemi tanár tartott előadást az orosz-ukrán háború és ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/f74lXzjI-gA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/f74lXzjI-gA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/f74lXzjI-gA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-08T16:15:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "drjM1Pc00sWR03mWh6wolgtDHQg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iHBSZYQstos"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-08T10:15:06Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: Zelenszkij dühbe jött, káromkodva szidta Putyint és az oroszokat - Nógrádi György",
+        "description": "Az Ultrahang legfrissebb adásában Nógrádi György biztonságpolitikai szakértő volt a vendégünk, akivel az Ausztriában zajló ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iHBSZYQstos/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iHBSZYQstos/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iHBSZYQstos/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-08T10:15:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "b5-ziH5k9DR_VtRtzJAqaHFtBSs",
       "id": {
         "kind": "youtube#video",
         "videoId": "hSV4KobTbK0"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-07T16:15:03Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: ez a háború elveszett, alapvető érdek a tűzszünet - Demkó Attila",
+        "description": "Az Ultrahang legfrissebb adásában Demkó Attila, a Nemzeti Közszolgálati Egyetem John Lukács Intézetének stratégiai jövő ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hSV4KobTbK0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hSV4KobTbK0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hSV4KobTbK0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-07T16:15:03Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "-dG5aOg9UDckwW3XIBby8wtEqXE",
+      "etag": "vYQ7OQv8RNXrUDknH9z_Diq4onM",
       "id": {
         "kind": "youtube#video",
         "videoId": "dC4f5aVKKz4"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-07T10:15:02Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "New vid title",
+        "description": "Az Ultrahang legfrissebb adásában Georg Spöttle biztonságpolitikai szakértő volt a vendégünk, akivel az orosz-ukrán háború ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dC4f5aVKKz4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dC4f5aVKKz4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dC4f5aVKKz4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-07T10:15:02Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "iGB84QP_mpx6yJPNQtlIV07_XtM",
+      "etag": "qoX9B8Ca_4hbnhM-jW7C3T2E5Sw",
       "id": {
         "kind": "youtube#video",
         "videoId": "DgJuJq1_g2Q"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-06T16:15:01Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: döntés született, kegyetlen lesz a folytatás? - Hegyi Gyula",
+        "description": "Az Ultrahang legfrissebb adásában Hegyi Gyula újságíró, volt Európa Parlamenti képviselő volt a vendégünk, akivel a az ortodox ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DgJuJq1_g2Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DgJuJq1_g2Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DgJuJq1_g2Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-06T16:15:01Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "cUFWK6h-mZnR37GQ3MiyBayJFiI",
+      "etag": "sDpdO5z_NEO0SBlXwHgu5pGHPdY",
       "id": {
         "kind": "youtube#video",
         "videoId": "soDxRoePm2Q"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-06T10:15:06Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: drámai beismerő nyilatkozat Donald Trump beiktatása előtt - Robert C. Castel",
+        "description": "Az Ultrahang legfrissebb adásában Robert C. Castel biztonságpolitikai szakértő, az Alapjogokért Központ elemzője volt a ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/soDxRoePm2Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/soDxRoePm2Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/soDxRoePm2Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-06T10:15:06Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "ACgfccAhG7kpeuNOMMurAC_H1lc",
+      "etag": "02KH_zpmHGGFUj9SJjUwn90vEVw",
       "id": {
         "kind": "youtube#video",
         "videoId": "SGLNBpGw63g"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-05T16:41:29Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Politikai káosz lett Ausztriában is, az FPÖ kerülhet hatalomra - Heti Hírmix",
+        "description": "Az Ultrahang heti nemzetközi hírösszefoglalójában Thuróczy Richard ismerteti az aktuális híreket. Ausztriában összeomlottak a ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SGLNBpGw63g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SGLNBpGw63g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SGLNBpGw63g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-05T16:41:29Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "WrCKRKPuKjH9W7wYgukLHmLeu94",
+      "etag": "cA0SggP9XgUQIndvwKQcci6iCgM",
       "id": {
         "kind": "youtube#video",
         "videoId": "iO8G_lLoisU"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-05T10:15:04Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: elindult az offenzíva, elismerte az USA a vereséget? - Georg Spöttle",
+        "description": "Az Ultrahang legfrissebb adásában Georg Spöttle biztonságpolitikai szakértő volt a vendégünk, akivel az orosz-ukrán háború ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iO8G_lLoisU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iO8G_lLoisU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iO8G_lLoisU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-05T10:15:04Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "SSyYXFXB_7Lqbe2WcJmVoWaXT50",
+      "etag": "IrViFyUd01Iw7d-E5KnKErZywuE",
       "id": {
         "kind": "youtube#video",
         "videoId": "9Y0Zori8fgY"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-04T16:15:00Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: előrenyomultak az oroszok, újabb terület veszett el - Stier Gábor",
+        "description": "A Moszkvatér legfrissebb adásában Stier Gábor, a www.moszkvater.com főszerkesztője volt a vendégünk, akivel az orosz-ukrán ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9Y0Zori8fgY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9Y0Zori8fgY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9Y0Zori8fgY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-04T16:15:00Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "YY2rAc3bCElRe_aHsTl3XIMgajk",
+      "etag": "vtcHbip8-BCAzT9CRASWlvq4NiQ",
       "id": {
         "kind": "youtube#video",
         "videoId": "Be5AqVUGdRg"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "Thf-Zi_1J3Uk6jMFO3UUKG5fg1A",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "2G-odTeV42I"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "sHc9sXEDlGIif-FLjxil_YFQvQs",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "-lkUXI1Lshg"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "BuwNi5-CSoCy7J6K9tUlArR8Uvg",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "qef-DAAPqXk"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "w9tdrL-AkiHHBnZA3ZAnaJwSRe8",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "4sWpDg6xqIs"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "hzqdf69C6J2tVLOUQlMXC9XiTGA",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "tqJbE5Jth1k"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "8IgPzIxCiPum_2UwuSuP0XoSMWg",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "mtLXMINbRNA"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "N7mzdC6leilvZn0qCEMZ8ObbuVw",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "JowBJ97w810"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-04T10:15:02Z",
+        "channelId": "UChUByu3QDGaVD6iyt0jzngw",
+        "title": "Ukrajna: ez volt Zelenszkij legrosszabb interjúja? - Nógrádi György",
+        "description": "Az Ultrahang legfrissebb adásában Nógrádi György biztonságpolitikai szakértő volt a vendégünk, akivel az orosz-ukrán háború ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Be5AqVUGdRg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Be5AqVUGdRg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Be5AqVUGdRg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ultrahang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-04T10:15:02Z"
       }
     }
   ]

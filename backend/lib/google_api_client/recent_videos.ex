@@ -6,11 +6,12 @@ defmodule GoogleApiClient.RecentVideos do
 
   @channel_id "UChUByu3QDGaVD6iyt0jzngw"
 
-  def fetch_ids(count \\ 15) do
+  def fetch(count \\ 15) do
+    # TODO: Use publishedAfter
     url =
       "#{@youtube_api_url}/search?" <>
         URI.encode_query(%{
-          "part" => "id",
+          "part" => "snippet",
           "channelId" => @channel_id,
           "maxResults" => count,
           "order" => "date",
@@ -21,8 +22,7 @@ defmodule GoogleApiClient.RecentVideos do
     case HTTPoison.get(url) do
       {:ok, %{status_code: 200, body: body}} ->
         {:ok, decoded} = Jason.decode(body)
-        video_ids = decoded["items"] |> Enum.map(& &1["id"]["videoId"])
-        {:ok, video_ids}
+        {:ok, decoded["items"]}
 
       {:error, reason} ->
         {:error, reason}
