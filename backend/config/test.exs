@@ -6,8 +6,8 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :jump_start, JumpStart.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "no_crypto_mining_user",
+  password: "no_crypto_mining_password",
   hostname: "localhost",
   database: "jump_start_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
@@ -32,8 +32,8 @@ config :phoenix_live_view,
 
 config :jump_start,
   google_api: [
-    base_url: "http://localhost:4000"
+    base_url: "http://localhost:8080"
   ],
   openai_api: [
-    base_url: "http://localhost:4001"
+    base_url: "http://localhost:8081"
   ]

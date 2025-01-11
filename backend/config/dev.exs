@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :jump_start, JumpStart.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "no_crypto_mining_user",
+  password: "no_crypto_mining_password",
   hostname: "localhost",
   database: "jump_start_dev",
   stacktrace: true,
@@ -84,8 +84,8 @@ config :phoenix_live_view,
 # TODO: refactor this
 config :jump_start,
   google_api: [
-    base_url: "http://localhost:4000"
+    base_url: "http://localhost:8080"
   ],
   openai_api: [
-    base_url: "http://localhost:4001"
+    base_url: "http://localhost:8081"
   ]
